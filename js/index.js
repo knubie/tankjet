@@ -2,6 +2,9 @@
 	$(document).waitForImages(function () {
 		var win = $(window),
 				sc = $(".slides-container");
+		$('.waypoint').waypoint(function(){
+			alert('scrolled to coool place');
+		});
 		function init() {
 			function resize() {
 				$(".resize-me").fit(win.width(), win.height(), (1024/768))
