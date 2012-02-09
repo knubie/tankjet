@@ -1,11 +1,13 @@
 (function ($) {
 	$(document).ready(function (){
-		
-		$('.waypoint').waypoint(function(){
-			alert('scrolled to coool place');
-		});
-
 		$(document).waitForImages(function () {
+
+			$('.makuhari-slideshow').waypoint(function(event, direction){
+				if (direction == 'down') {
+					alert('scrolled to coool place');
+				}
+			});
+
 			var win = $(window),
 					sc = $(".slides-container");
 			function init() {
