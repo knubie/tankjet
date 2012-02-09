@@ -1,9 +1,11 @@
 <html>
 <head>
 	<title>Tank Jet Studios</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
 	<script type="text/javascript" src="js/jquery.waitforimages.js"></script>
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
 	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
@@ -12,9 +14,31 @@
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-	<div class="img-container">
+
+	<!-- FIXED ELEMENTS
+	================================================== -->
+	<img src="img/logo-mark-dark.png" alt="Tank Jet Studios" id="logo-dark"/>
+	<a href="javascript:void(0)" id="down">
+		<img src="img/down.png" alt=""/>
+	</a>
+
+	<div id="navigation">
+		<a href="javascript:void(0)"><div id="work">work</div></a>
+		<a href="javascript:void(0)"><div id="about">about</div></a>
+		<a href="javascript:void(0)"><div id="contact">contact</div></a>
+	</div>
+
+	<!-- HOME
+	================================================== -->
+	<div id="home" class="img-container">
 		<img src="img/slides/home.jpg" class="resize-me" alt=""/>
 	</div>
+
+	<!-- MAKUHARI SLIDES
+	================================================== -->
+	<a href="javascript:void(0)" class="slide-ctrl left makuhari-left">
+		<img src="img/left.png" alt=""/>
+	</a>
 	<div class="makuhari-slideshow slides-container">
 		<div class="makuhari-slide slide">
 			<img src="img/slides/makuhari-slide-1.png" class="center-me" alt=""/>
@@ -23,5 +47,41 @@
 			<img src="img/slides/makuhari-slide-2.png" class="resize-me" alt=""/>
 		</div>
 	</div>
+	<a href="javascript:void(0)" class="slide-ctrl right makuhari-right">
+		<img src="img/right.png" alt=""/>
+	</a>
+
+	<!-- PELOTERO SLIDES
+	================================================== -->
+	<a href="javascript:void(0)" class="slide-ctrl left pelotero-left">
+		<img src="img/left.png" alt=""/>
+	</a>
+	<div class="pelotero-slideshow slides-container">
+		<div class="makuhari-slide slide">
+			<img src="img/slides/makuhari-slide-1.png" class="center-me" alt=""/>
+		</div>
+		<div class="makuhari-slide slide">
+			<img src="img/slides/makuhari-slide-2.png" class="resize-me" alt=""/>
+		</div>
+	</div>
+	<a href="javascript:void(0)" class="slide-ctrl right pelotero-right">
+		<img src="img/right.png" alt=""/>
+	</a>
+	<!-- ROMSHU SLIDES
+	================================================== -->
+	<a href="javascript:void(0)" class="slide-ctrl left romshu-left">
+		<img src="img/left.png" alt=""/>
+	</a>
+	<div class="romshu-slideshow slides-container">
+		<div class="romshu-slide slide">
+			<img src="img/slides/romshu-slide-1.png" class="center-me" alt=""/>
+		</div>
+		<div class="romshu-slide slide">
+			<img src="img/slides/makuhari-slide-2.png" class="resize-me" alt=""/>
+		</div>
+	</div>
+	<a href="javascript:void(0)" class="slide-ctrl right romshu-right">
+		<img src="img/right.png" alt=""/>
+	</a>
 </body>
 </html>
