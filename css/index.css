@@ -21,6 +21,7 @@
 	display: none;
 	z-index: 99;
 	position: fixed;
+	width: 100px;
 }
 #down {
 	position: absolute;
