@@ -5,8 +5,10 @@
 			$('.makuhari-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('#logo-dark, .makuhari-left, .makuhari-right').fadeIn('fast');
+					$('#navigation > a > div:first').css('background-color', '#333333').css('color', '#ffffff');
 				} else {
 					$('#logo-dark, .left, .right').fadeOut('fast');
+					$('#navigation > a > div:first').attr('style', '');
 				}
 			}, {offset: 50});
 			$('.pelotero-slideshow').waypoint(function(event, direction){
