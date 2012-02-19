@@ -9,12 +9,20 @@
 					$('#logo-dark, .left, .right').fadeOut('fast');
 				}
 			}, {offset: 50});
+			$('.pelotero-slideshow').waypoint(function(event, direction){
+				if (direction == 'down') {
+					$('.pelotero-left, .pelotero-right').fadeIn('fast');
+					$('.makuhari-left, .makuhari-right').fadeOut('fast');
+				} else {
+					$('.pelotero-left, .pelotero-right').fadeOut('fast');
+				}
+			}, {offset: 50});
 			$('.romshu-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('.romshu-left, .romshu-right').fadeIn('fast');
-					$('.makuhari-left, .makuhari-right').fadeOut('fast');
+					$('.pelotero-left, .pelotero-right').fadeOut('fast');
 				} else {
-					$('#logo-light, .makuhari-left, .makuhari-right').fadeOut('fast');
+					$('.romshu-left, .romshu-right').fadeOut('fast');
 				}
 			}, {offset: 50});
 
