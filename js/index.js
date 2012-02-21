@@ -2,6 +2,15 @@
 	$(document).ready(function (){
 		$(document).waitForImages(function () {
 
+			$('.home-slideshow').waypoint(function(event, direction){
+				if (direction == 'left') {
+					$('#logo-dark, .makuhari-left, .makuhari-right').fadeIn('fast');
+					$('#navigation > a > div:first').css('background-color', '#333333').css('color', '#ffffff');
+				} else {
+					$('#logo-dark, .left, .right').fadeOut('fast');
+					$('#navigation > a > div:first').attr('style', '');
+				}
+			}, {offset: 50});
 			$('.makuhari-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('#logo-dark, .makuhari-left, .makuhari-right').fadeIn('fast');
@@ -31,12 +40,22 @@
 			$('#down, #work').click(function(){
 				$(window).scrollTo($('.makuhari-slideshow'), 700);
 			});	
+			$('#right, #about').click(function() { 
+    			$(window).scrollTo($('.home-slideshow'), 700);
+    			$('.home-slideshow').cycle(1);  
+			}); 
+			$('#right, #contact').click(function() { 
+    			$(window).scrollTo($('.home-slideshow'), 700);
+    			$('.home-slideshow').cycle(2);  
+			}); 
 			$('.left').click(function(){
 				$(this).next('div').cycle('prev');
 			});
 			$('.right').click(function(){
 				$(this).prev('div').cycle('next');
 			});
+
+		
 
 			var win = $(window),
 					sc = $(".slides-container");
