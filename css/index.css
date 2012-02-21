@@ -23,6 +23,28 @@
 	height: 100%;
 }
 
+#aboutText {
+    width: 900px;
+    margin-left:-450px;
+    margin-top: -205px;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index:10;
+    color: #fff;
+    font-family: Sans-Serif;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#aboutText h1{
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-size: 36px;
+}
 
 .home_slide {
 	background-image: #000 !important;
