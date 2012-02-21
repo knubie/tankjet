@@ -46,6 +46,35 @@
 	font-size: 36px;
 }
 
+#contactText {
+    width: 900px;
+    margin-left:-50px;
+    margin-top: -205px;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index:10;
+    color: #fff;
+    font-family: Sans-Serif;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#contactText a{
+	color: #fff;
+	text-decoration:none;
+}
+
+#contactText h1{
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-size: 42px;
+}
+
+
 .home_slide {
 	background-image: #000 !important;
 	text-align: center;
