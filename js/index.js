@@ -20,7 +20,7 @@
 					$('#logo-dark, .left, .right').fadeOut('fast');
 					$('#navigation > a > div:first').attr('style', '');
 				}
-			}, {offset: 50});
+			}, {offset: $(window).height()/2});
 			$('.pelotero-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('.pelotero-left, .pelotero-right').fadeIn('fast');
@@ -29,7 +29,7 @@
 					$('.pelotero-left, .pelotero-right').fadeOut('fast');
 					$('.makuhari-left, .makuhari-right').fadeIn('fast');
 				}
-			}, {offset: 50});
+			}, {offset: $(window).height()/2});
 			$('.romshu-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('.romshu-left, .romshu-right').fadeIn('fast');
@@ -38,7 +38,7 @@
 					$('.romshu-left, .romshu-right').fadeOut('fast');
 					$('.pelotero-left, .pelotero-right').fadeIn('fast');
 				}
-			}, {offset: 50});
+			}, {offset: $(window).height()/2});
 
 			$('#down, #work').click(function(){
 				$(window).scrollTo($('.makuhari-slideshow'), 700);
