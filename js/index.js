@@ -93,6 +93,12 @@
 					fit: 1,
 					slideResize: 0
 				});
+				$('.home-illos').cycle({
+					fx: 'fade',
+					timeout: 3,
+					fit: 1,
+					slideResize: 0
+				})
 				
 			};
 
