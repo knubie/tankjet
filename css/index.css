@@ -20,38 +20,39 @@
 }
 
 #aboutText {
-    width: 900px;
-    margin-left:-450px;
-    margin-top: -205px;
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index:10;
-    color: #fff;
-    font-family: Sans-Serif;
-    line-height: 28px;
-    font-size: 18px;
-    font-weight: 100;
+	font-family: Sans-Serif;
+  width: 900px;
+  margin-left:-450px;
+  margin-top: -205px;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index:10;
+  color: #fff;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 100;
 }
 
 #aboutText h1{
 	color: #fff;
+  font-family: TradeGothicBold;
 	text-transform: uppercase;
 	margin-bottom: 10px;
-	font-size: 36px;
+	font-size: 47px;
 }
 
 #contactText {
     width: 900px;
     margin-left:-50px;
-    margin-top: -205px;
+    margin-top: -180px;
     text-align: left;
     position: absolute;
     top: 50%;
     left: 10%;
     z-index:10;
-    color: #fff;
+    color: #333;
     font-family: Sans-Serif;
     line-height: 28px;
     font-size: 18px;
@@ -59,12 +60,12 @@
 }
 
 #contactText a{
-	color: #fff;
+	color: #333;
 	text-decoration:none;
 }
 
 #contactText h1{
-	color: #fff;
+	font-family: TradeGothicBold;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 	font-size: 42px;
