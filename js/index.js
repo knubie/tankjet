@@ -52,18 +52,24 @@
 			$('#down, #work').click(function(){
 				$(window).scrollTo($('.makuhari-slideshow'), 700);
 				$('#about, #contact').attr('style', '');
+  			$('.contact-slide').fadeOut(700);
+  			$('.about-slide').fadeOut(700);
 			});	
 			$('#about').click(function() { 
-    			$(window).scrollTo($('.home-slideshow'), 700);
+    			// $(window).scrollTo($('.home-slideshow'), 700);
 					$('#contact, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
-    			$('.home-slideshow').cycle(1);  
+    			// $('.home-slideshow').cycle(1);  
+    			$('.about-slide').fadeIn(700);
+    			$('.contact-slide').fadeOut(700);
 			}); 
 			$('#contact').click(function() { 
-    			$(window).scrollTo($('.home-slideshow'), 700);
+    			// $(window).scrollTo($('.home-slideshow'), 700);
 					$('#about, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
-    			$('.home-slideshow').cycle(2);  
+    			// $('.home-slideshow').cycle(2);  
+    			$('.about-slide').fadeOut(700);
+    			$('.contact-slide').fadeIn(700);
 			}); 
 			$('.left').click(function(){
 				var that = $(this);
