@@ -2,24 +2,16 @@
 	$(document).ready(function (){
 		$(document).waitForImages(function () {
 
-			$('.home-slideshow').waypoint(function(event, direction){
-				if (direction == 'left') {
-					$('#logo-dark, .makuhari-left, .makuhari-right').fadeIn('fast');
-					$('#navigation > a > div:first').css('background-color', '#333333').css('color', '#ffffff');
-				} else {
-					$('#logo-dark, .left, .right').fadeOut('fast');
-					$('#navigation > a > div:first').attr('style', '');
-				}
-			}, {offset: 50});
 			$('.makuhari-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('#logo-dark, .makuhari-left, .makuhari-right').fadeIn('fast');
-					$('#navigation > a > div:first').css('background-color', '#333333').css('color', '#ffffff');
+					$('#work').css('background-color', '#333333').css('color', '#ffffff');
+					$('#about, #contact').attr('style', '');
     			$('.pelotero-slideshow').cycle(0);  
 				} else {
 					console.log('scrolling up makuhari')
 					$('#logo-dark, .left, .right').fadeOut('fast');
-					$('#navigation > a > div:first').attr('style', '');
+					$('#work').attr('style', '');
     			$('.makuhari-slideshow').cycle(0);  
 				}
 			}, {offset: $(window).height()/2});
