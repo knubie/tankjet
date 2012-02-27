@@ -49,12 +49,14 @@
 					$('#contact, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
     			$('.home-slideshow').cycle(1);  
+    			$('#logo-white').fadeOut();
 			}); 
 			$('#contact').click(function() { 
     			$(window).scrollTo($('.home-slideshow'), 700);
 					$('#about, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
     			$('.home-slideshow').cycle(2);  
+    			$('#logo-white').fadeOut();
 			}); 
 			$('.left').click(function(){
 				var that = $(this);
