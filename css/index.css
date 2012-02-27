@@ -97,7 +97,7 @@
 
 /* #PELOTERO
 ================================================== */
-.pelotero-slide-home {
+.pelotero-slide-home, .pelotero-slide {
 	background-repeat: repeat;
 	text-align: center;
 	width: 100%;
@@ -106,13 +106,25 @@
 
 /* #ROMSHU
 ================================================== */
-.romshu-slide {
-	background-color:#333;
+.romshu-slide, .romshu-slide-home {
 	text-align: center;
 	width: 100%;
 	height: 100%;
 }
+.romshu-slide-home {
+	background-color:#333;
+}
 
+/* #TRILECTABLES
+================================================== */
+.trilectables-slide, .trilectables-slide-home {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+.trilectables-slide-home {
+	background-color:#956c50;
+}
 /* #MISC
 ================================================== */
 .slides-container {
@@ -120,6 +132,11 @@
 }
 .img-container {
 	overflow: hidden;
+}
+img.shadow {
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  moz-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);	
 }
 #logo-dark {
 	top: 20px; left: 20px;
@@ -168,6 +185,9 @@
 .left, .right {
 	position: fixed;
 	z-index: 99;
+}
+.left img, .right img {
+	width: 50px;
 }
 .left {left: 20px; top: 10px; display: none; }
 .right {right: 20px; top: 10px; display: none;}

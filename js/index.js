@@ -15,28 +15,45 @@
 				if (direction == 'down') {
 					$('#logo-dark, .makuhari-left, .makuhari-right').fadeIn('fast');
 					$('#navigation > a > div:first').css('background-color', '#333333').css('color', '#ffffff');
+    			$('.pelotero-slideshow').cycle(0);  
 				} else {
 					console.log('scrolling up makuhari')
 					$('#logo-dark, .left, .right').fadeOut('fast');
 					$('#navigation > a > div:first').attr('style', '');
+    			$('.makuhari-slideshow').cycle(0);  
 				}
 			}, {offset: $(window).height()/2});
 			$('.pelotero-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('.pelotero-left, .pelotero-right').fadeIn('fast');
 					$('.makuhari-left, .makuhari-right').fadeOut('fast');
+    			$('.makuhari-slideshow').cycle(0);  
 				} else {
 					$('.pelotero-left, .pelotero-right').fadeOut('fast');
 					$('.makuhari-left, .makuhari-right').fadeIn('fast');
+    			$('.pelotero-slideshow').cycle(0);  
 				}
 			}, {offset: $(window).height()/2});
 			$('.romshu-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('.romshu-left, .romshu-right').fadeIn('fast');
 					$('.pelotero-left, .pelotero-right').fadeOut('fast');
+    			$('.pelotero-slideshow').cycle(0);  
 				} else {
 					$('.romshu-left, .romshu-right').fadeOut('fast');
 					$('.pelotero-left, .pelotero-right').fadeIn('fast');
+    			$('.romshu-slideshow').cycle(0);  
+				}
+			}, {offset: $(window).height()/2});
+			$('.trilectables-slideshow').waypoint(function(event, direction){
+				if (direction == 'down') {
+					$('.trilectables-left, .trilectables-right').fadeIn('fast');
+					$('.romshu-left, .romshu-right').fadeOut('fast');
+    			$('.romshu-slideshow').cycle(0);  
+				} else {
+					$('.trilectables-left, .trilectables-right').fadeOut('fast');
+					$('.romshu-left, .romshu-right').fadeIn('fast');
+    			$('.trilectables-slideshow').cycle(0);  
 				}
 			}, {offset: $(window).height()/2});
 
@@ -49,14 +66,12 @@
 					$('#contact, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
     			$('.home-slideshow').cycle(1);  
-    			$('#logo-white').fadeOut();
 			}); 
 			$('#contact').click(function() { 
     			$(window).scrollTo($('.home-slideshow'), 700);
 					$('#about, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
     			$('.home-slideshow').cycle(2);  
-    			$('#logo-white').fadeOut();
 			}); 
 			$('.left').click(function(){
 				var that = $(this);
