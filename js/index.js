@@ -55,6 +55,16 @@
   			$('.contact-slide').fadeOut(700);
   			$('.about-slide').fadeOut(700);
 			});	
+			$('#logo-dark').click(function() {
+  			$(window).scrollTo($('.home-slide'), 700);
+  			$('.about-slide').fadeOut(700);
+  			$('.contact-slide').fadeOut(700);
+			});
+			$('#logo-white').click(function() {
+  			$(window).scrollTo($('.home-slide'), 700);
+  			$('.about-slide').fadeOut(700);
+  			$('.contact-slide').fadeOut(700);
+			});
 			$('#about').click(function() { 
     			// $(window).scrollTo($('.home-slideshow'), 700);
 					$('#contact, #work').attr('style', '');
