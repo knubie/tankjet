@@ -103,6 +103,7 @@
 	background-repeat: repeat;
 }
 
+
 /* #PELOTERO
 ================================================== */
 .pelotero-slide-home, .pelotero-slide {
@@ -140,6 +141,26 @@
 ================================================== */
 .slides-container {
 	height: 100%;
+}
+.slide-show-links {
+	position: relative;
+	z-index: 99;
+	height: 0;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: TradeGothic;
+	color: black;
+	color: #999;
+}
+.slide-show-links a {
+	text-decoration: none;
+}
+.white-links a {
+	color: white;
+}
+.dark-links a {
+	color: #333;
 }
 .slide {
 	overflow: hidden;
