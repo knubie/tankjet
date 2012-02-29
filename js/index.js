@@ -2,6 +2,14 @@
 	$(document).ready(function (){
 		$(document).waitForImages(function () {
 
+			$(document).mousemove(function(e){
+				if (e.pageX < 150) {
+					console.log('fade in left arrow');
+				}
+				if (($(window).width() - e.pageX) < 150) {
+					console.log('fade in right arrow');
+				}
+		  });
 			$('.makuhari-slideshow').waypoint(function(event, direction){
 				if (direction == 'down') {
 					$('#logo-dark, .makuhari-left, .makuhari-right').fadeIn('fast');
@@ -55,6 +63,11 @@
   			$('.contact-slide').fadeOut(700);
   			$('.about-slide').fadeOut(700);
 			});	
+			$('.slide-down').click(function () {
+				var that = $(this).parent().parent().parent().next().next().next('div')
+				console.log(that);
+				$(window).scrollTo(that, 700);
+			})
 			$('#logo-dark').click(function() {
   			$(window).scrollTo($('.home-slide'), 700);
   			$('.about-slide').fadeOut(700);
@@ -91,8 +104,11 @@
 				$(window).scrollTo(that.prev('div'), 700);
 				$(this).prev('div').cycle('next');
 			});
-			$('.slide-show-links > a').click(function() {
-  			$(this).parent().next('div').cycle(parseInt($(this).attr('data-slide')));  
+			$('.slide-show-links > a').not('.slide-down').click(function() {
+				var that = $(this);
+				console.log('wrong one');
+				$(window).scrollTo(that.parent().parent().parent('div'), 700);
+  			$(this).parent().parent().parent('div').cycle(parseInt($(this).attr('data-slide')));  
 			})
 
 			var win = $(window),
@@ -115,12 +131,6 @@
 					})
 					$('.bottom').css('margin-bottom', function(){
 						return 0 - $(this).height();
-					});
-					$('.slide-show-links').css('margin-top', function() {
-						return $(window).height()*.9;
-					});
-					$('.slide-show-links').css('margin-bottom', function() {
-						return 0 - ($(window).height()*.9);
 					});
 				};
 				resize();

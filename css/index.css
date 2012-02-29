@@ -143,9 +143,9 @@
 	height: 100%;
 }
 .slide-show-links {
-	position: relative;
+	position: absolute;
 	z-index: 99;
-	height: 0;
+	bottom: 20px;
 	width: 100%;
 	text-align: center;
 	text-transform: uppercase;
