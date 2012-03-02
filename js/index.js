@@ -56,6 +56,17 @@
     			$('.trilectables-slideshow').cycle(0);  
 				}
 			}, {offset: $(window).height()/2});
+			$('.domesticated-slideshow').waypoint(function(event, direction){
+				if (direction == 'down') {
+					$('.domesticated-left, .domesticated-right').fadeIn('fast');
+					$('.romshu-left, .romshu-right').fadeOut('fast');
+    			$('.trilectables-slideshow').cycle(0);  
+				} else {
+					$('.domesticated-left, .domesticated-right').fadeOut('fast');
+					$('.romshu-left, .romshu-right').fadeIn('fast');
+    			$('.domesticated-slideshow').cycle(0);  
+				}				
+			}, {offset: $(window).height()/2});
 
 			$('#down, #work').click(function(){
 				$(window).scrollTo($('.makuhari-slideshow'), 700);
