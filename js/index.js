@@ -83,6 +83,7 @@
 				$('#about, #contact').attr('style', '');
   			$('.contact-slide').fadeOut(700);
   			$('.about-slide').fadeOut(700);
+  			$('body').css('overflow', 'scroll');
 			});	
 			$('.slide-down').click(function () {
 				var that = $(this).parent().parent().parent().next().next().next('div')
@@ -91,6 +92,7 @@
 			})
 			$('#logo-dark').click(function() {
   			$(window).scrollTo($('.home-slide'), 700);
+  			$(this).fadeOut(700);
   			$('.about-slide').fadeOut(700);
   			$('.contact-slide').fadeOut(700);
 			});
@@ -101,19 +103,23 @@
 			});
 			$('#about').click(function() { 
     			// $(window).scrollTo($('.home-slideshow'), 700);
+					$('#logo-dark').fadeIn('fast');
 					$('#contact, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
     			// $('.home-slideshow').cycle(1);  
     			$('.about-slide').fadeIn(700);
     			$('.contact-slide').fadeOut(700);
+    			$('body').css('overflow', 'hidden');
 			}); 
 			$('#contact').click(function() { 
+					$('#logo-dark').fadeIn('fast');
     			// $(window).scrollTo($('.home-slideshow'), 700);
 					$('#about, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
     			// $('.home-slideshow').cycle(2);  
     			$('.about-slide').fadeOut(700);
     			$('.contact-slide').fadeIn(700);
+    			$('body').css('overflow', 'hidden');
 			}); 
 			$('.left').click(function(){
 				var that = $(this);
