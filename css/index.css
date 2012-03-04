@@ -70,6 +70,7 @@
 #contactText a{
 	color: #333;
 	text-decoration:none;
+	font-weight:bold;
 }
 
 #contactText h1{
