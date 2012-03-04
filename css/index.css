@@ -197,6 +197,13 @@ img.shadow {
 	z-index: 99;
 	position: absolute;
 }
+
+#tagline_top {
+	top: 100px; left: 20px;
+	z-index: 99;
+	position: absolute;
+}
+
 #down {
 	position: absolute;
 	bottom: 40px; right: 40px;
