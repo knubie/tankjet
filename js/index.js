@@ -73,6 +73,7 @@
 				$('#about, #contact').attr('style', '');
   			$('.contact-slide').fadeOut(700);
   			$('.about-slide').fadeOut(700);
+  			$('body').css('overflow', 'scroll');
 			});	
 			$('.slide-down').click(function () {
 				var that = $(this).parent().parent().parent().next().next().next('div')
@@ -96,6 +97,7 @@
     			// $('.home-slideshow').cycle(1);  
     			$('.about-slide').fadeIn(700);
     			$('.contact-slide').fadeOut(700);
+    			$('body').css('overflow', 'hidden');
 			}); 
 			$('#contact').click(function() { 
     			// $(window).scrollTo($('.home-slideshow'), 700);
@@ -104,6 +106,7 @@
     			// $('.home-slideshow').cycle(2);  
     			$('.about-slide').fadeOut(700);
     			$('.contact-slide').fadeIn(700);
+    			$('body').css('overflow', 'hidden');
 			}); 
 			$('.left').click(function(){
 				var that = $(this);
