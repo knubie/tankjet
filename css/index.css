@@ -213,8 +213,8 @@ img.shadow {
 	position: absolute;
 }
 
-#tagline_top {
-	top: 100px; left: 20px;
+#tagline-top {
+	top: 120px; left: 20px;
 	z-index: 50;
 	position: absolute;
 }
