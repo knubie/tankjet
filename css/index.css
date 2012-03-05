@@ -160,9 +160,8 @@
 	text-align: justify;
 	text-justify: full;
 	font-family: 'TradeGothic' helvetica;
-	line-height:44px;
+	line-height:1.5em;
 	font-size: 25px;
-	text-transform: uppercase;
 	-webkit-font-smoothing: antialiased;
 
 }
