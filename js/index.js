@@ -95,6 +95,7 @@
   			$(this).fadeOut(700);
   			$('.about-slide').fadeOut(700);
   			$('.contact-slide').fadeOut(700);
+  			$('body').css('overflow', 'scroll');
 			});
 			$('#logo-white').click(function() {
   			$(window).scrollTo($('.home-slide'), 700);
