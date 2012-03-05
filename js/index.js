@@ -86,7 +86,7 @@
   			$('body').css('overflow', 'scroll');
 			});	
 			$('.slide-down').click(function () {
-				var that = $(this).parent().parent().parent().next().next().next('div')
+				var that = $(this).next().next().next('div');
 				console.log(that);
 				$(window).scrollTo(that, 700);
 			})
@@ -128,12 +128,12 @@
 			});
 			$('.right').click(function(){
 				var that = $(this);
-				$(window).scrollTo(that.prev('div'), 700);
-				$(this).prev('div').cycle('next');
+				console.log(that.prev('a').prev('div'));
+				$(window).scrollTo(that.prev('a').prev('div'), 700);
+				$(this).prev('a').prev('div').cycle('next');
 			});
 			$('.slide-show-links > a').not('.slide-down').click(function() {
 				var that = $(this);
-				console.log('wrong one');
 				$(window).scrollTo(that.parent().parent().parent('div'), 700);
   			$(this).parent().parent().parent('div').cycle(parseInt($(this).attr('data-slide')));  
 			})
@@ -147,9 +147,9 @@
 					//$(window).scrollTo($('.slides-container:in-viewport'), 0);
 					$(".resize-me").fit(win.width(), win.height(), (1024/768))
 					$(".resize-me").centerCropFit(win.width(), win.height())
-					$("#down").css("left", function(){
+					$("#down, .slide-down").css("left", function(){
 						return (win.width()/2) - ($(this).width()/2);
-					})
+					});
 					$(".center-me").css('margin-top', function() {
 						return (win.height() / 2) - ($(this).height() / 2);
 					});
