@@ -179,7 +179,13 @@
 	background-color:#FFF;
 }
 
+.check-slide-home {
+	background-color:#000;
+}
 
+.mobile-slide-home {
+	background-color:#2148df;
+}
 /* #MISC
 ================================================== */
 .slides-container {
