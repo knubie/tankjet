@@ -155,7 +155,7 @@
 	width:800px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top:250px;
+	display: block;
 	color:#1a446d;
 	text-align: justify;
 	text-justify: full;
@@ -184,7 +184,7 @@
 }
 
 .mobile-slide {
-	background-color:#39559c;
+	background-color:#3f5e97;
 }
 /* #MISC
 ================================================== */
