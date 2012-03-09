@@ -274,14 +274,14 @@ img.shadow {
 	color: #fff;
 }
 .left, .right {
-	position: fixed;
+	position: absolute;
 	z-index: 50;
 }
 .left img, .right img {
 	width: 50px;
 }
-.left {left: 20px; top: 10px; display: none; }
-.right {right: 20px; top: 10px; display: none;}
+.left {left: 20px; top: 10px; }
+.right {right: 20px; top: 10px;}
 .bottom {position: relative; z-index:0;}
 .top {position: relative; z-index:10;}
 .slide-down {
@@ -290,4 +290,12 @@ img.shadow {
 }
 .slide-down img {
 	margin-top: -70px;
+}
+.slide-up {
+	position:absolute;
+	top: 20px;
+	z-index: 99;
+}
+.slides-wrapper {
+	position: relative;
 }
