@@ -78,8 +78,15 @@
     			$('.logos-slideshow').cycle(0);  
 				}				
 			}, {offset: $(window).height()/2});
+			var scroll_to = function (target, dur) {
+				if (target.length) {
+					var top = target.offset().top;
+					$('html,body').animate({scrollTop: top}, dur);
+					return false;
+				}
+			}
 			$('#down, #work').click(function(){
-				$(window).scrollTo($('.makuhari-slideshow'), 700);
+				scroll_to($('.makuhari-slideshow'), 700);
 				$('#about, #contact').attr('style', '');
   			$('.contact-slide').fadeOut(700);
   			$('.about-slide').fadeOut(700);
@@ -88,54 +95,50 @@
 			$('.slide-down').click(function () {
 				var that = $(this).next().next().next('div');
 				console.log(that);
-				$(window).scrollTo(that, 700);
+				scroll_to(that, 700);
 			})
 			$('#logo-dark').click(function() {
-  			$(window).scrollTo($('.home-slide'), 700);
+				scroll_to($('.home-slide'), 700);
   			$(this).fadeOut(700);
   			$('.about-slide').fadeOut(700);
   			$('.contact-slide').fadeOut(700);
   			$('body').css('overflow', 'scroll');
 			});
 			$('#logo-white').click(function() {
-  			$(window).scrollTo($('.home-slide'), 700);
+				scroll_to($('.home-slide'), 700);
   			$('.about-slide').fadeOut(700);
   			$('.contact-slide').fadeOut(700);
 			});
 			$('#about').click(function() { 
-    			// $(window).scrollTo($('.home-slideshow'), 700);
 					$('#logo-dark').fadeIn('fast');
 					$('#contact, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
-    			// $('.home-slideshow').cycle(1);  
     			$('.about-slide').fadeIn(700);
     			$('.contact-slide').fadeOut(700);
     			$('body').css('overflow', 'hidden');
 			}); 
 			$('#contact').click(function() { 
 					$('#logo-dark').fadeIn('fast');
-    			// $(window).scrollTo($('.home-slideshow'), 700);
 					$('#about, #work').attr('style', '');
 					$(this).css('background-color', '#333333').css('color', '#ffffff');
-    			// $('.home-slideshow').cycle(2);  
     			$('.about-slide').fadeOut(700);
     			$('.contact-slide').fadeIn(700);
     			$('body').css('overflow', 'hidden');
 			}); 
 			$('.left').click(function(){
 				var that = $(this);
-				$(window).scrollTo(that.next('div'), 700);
+				scroll_to(that.next('div'), 700);
 				$(this).next('div').cycle('prev');
 			});
 			$('.right').click(function(){
 				var that = $(this);
 				console.log(that.prev('a').prev('div'));
-				$(window).scrollTo(that.prev('a').prev('div'), 700);
+				scroll_to(that.prev('a').prev('div'), 700);
 				$(this).prev('a').prev('div').cycle('next');
 			});
 			$('.slide-show-links > a').not('.slide-down').click(function() {
 				var that = $(this);
-				$(window).scrollTo(that.parent().parent().parent('div'), 700);
+				scroll_to(that.parent().parent().parent('div'), 700);
   			$(this).parent().parent().parent('div').cycle(parseInt($(this).attr('data-slide')));  
 			})
 
@@ -145,7 +148,6 @@
 				function resize() {
 					$(".slides-container, .img-container").css("width", $(window).width());
 					$(".slides-container, .img-container").css("height", $(window).height());
-					//$(window).scrollTo($('.slides-container:in-viewport'), 0);
 					$(".resize-me").fit(win.width(), win.height(), (1024/768))
 					$(".resize-me").centerCropFit(win.width(), win.height())
 					$("#down, .slide-down").css("left", function(){
