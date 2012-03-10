@@ -2,7 +2,9 @@
 	$(document).ready(function (){
 		$(document).waitForImages(function () {
 
-		if ( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) ) { } else {
+		if ( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) ) {
+			$('.slide-up, .slide-down').hide();
+		} else {
 	  	$(window).mousemove(function(e){
 				if (e.clientX < 250) {
 					$('.left').fadeIn(300);
@@ -142,29 +144,34 @@
 			$(this).parent().parent().parent('div').cycle(parseInt($(this).attr('data-slide')));  
 		})
 
-		var win = $(window),
-				sc = $(".slides-container");
+		var sc = $(".slides-container");
 		function init() {
 			function resize() {
-				$(".slides-container, .img-container").css("width", $(window).width());
-				$(".slides-container, .img-container").css("height", $(window).height());
-				$(".resize-me").fit(win.innerWidth(), win.innerHeight(), (1024/768))
-				$(".resize-me").centerCropFit(win.innerWidth(), win.innerHeight())
+				if ( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) ) {
+					var winHeight = $(window).innerHeight()+182;
+				} else {
+					var winHeight = $(window).innerHeight();
+				}
+				var winWidth = $(window).innerWidth();
+				$(".slides-container, .img-container").css("width", winWidth);
+				$(".slides-container, .img-container").css("height", winHeight);
+				$(".resize-me").fit(winWidth, winHeight, (1024/768))
+				$(".resize-me").centerCropFit(winWidth, winHeight)
 				$("#down, .slide-down, .slide-up").css("left", function(){
-					return (win.innerWidth()/2) - ($(this).innerWidth()/2);
+					return (winWidth/2) - ($(this).innerWidth()/2);
 				});
 				$(".center-me").css('margin-top', function() {
-					return (win.innerHeight() / 2) - ($(this).innerHeight() / 2);
+					return (winHeight / 2) - ($(this).height() / 2);
 				});
 				$(".slide-ctrl").css("top", function() {
-					return (win.innerHeight()/2) - ($(this).innerHeight()/2);
+					return (winHeight/2) - ($(this).innerHeight()/2);
 				})
 				$('.bottom').css('margin-bottom', function(){
 					return 0 - $(this).height();
 				});
 			};
 			resize();
-			win.resize(resize);
+			$(window).resize(resize);
 
 			$(".slides-container").cycle({
 				fx: 'scrollHorz',
