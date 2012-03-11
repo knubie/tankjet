@@ -191,6 +191,12 @@
 .slides-container {
 	height: 100%;
 }
+.slides-container:hover {
+	cursor: pointer;
+}
+.slide:hover{
+	cursor:pointer;
+}
 .slide-show-links {
 	position: absolute;
 	z-index: 99;

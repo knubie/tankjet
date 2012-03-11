@@ -128,6 +128,9 @@
 			scroll_to(that.next('div'), 700);
 			$(this).next('div').cycle('next');
 		});
+		$('.slides-container').click(function(){
+			$(this).prev().click();
+		})
 		$('.slide-down').click(function () {
 			// var that = $(this).next().next().next('div');
 			console.log($(this).parent().next('div'));
