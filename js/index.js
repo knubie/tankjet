@@ -6,22 +6,22 @@
 			$('.slide-up, .slide-down').hide();
 		} else {
 	  	$(window).mousemove(function(e){
-				if (e.clientX < 250) {
+				if (e.clientX < 350) {
 					$('.left').fadeIn(300);
 				} else {
 					$('.left').fadeOut(300);
 				}
-				if (($(window).width() - e.clientX) < 250) {
+				if (($(window).width() - e.clientX) < 350) {
 					$('.right').fadeIn(300);
 				} else {
 					$('.right').fadeOut(300);
 				}
-				if (e.clientY < 250) {
+				if (e.clientY < 350) {
 					$('.slide-up').fadeIn(300);
 				} else {
 					$('.slide-up').fadeOut(300);
 				}
-				if (($(window).height() - e.clientY) < 250) {
+				if (($(window).height() - e.clientY) < 350) {
 					$('.slide-down').fadeIn(300);
 				} else {
 					$('.slide-down').fadeOut(300);
