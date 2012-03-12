@@ -162,7 +162,7 @@
 				$(".resize-me").fit(winWidth, winHeight, (1024/768))
 				$(".resize-me").centerCropFit(winWidth, winHeight)
 				$("#down, .slide-down, .slide-up").css("left", function(){
-					return (winWidth/2) - ($(this).innerWidth()/2);
+					return (winWidth/2) - ($(this).width()/2);
 				});
 				$(".center-me").css('margin-top', function() {
 					return (winHeight / 2) - ($(this).height() / 2);
