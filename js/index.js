@@ -31,11 +31,12 @@
 
 		$('.makuhari-slideshow').waypoint(function(event, direction){
 			if (direction == 'down') {
+				$('#logo-dark').fadeIn('fast');
 				$('#work').css('background-color', '#333333').css('color', '#ffffff');
 				$('#about, #contact').attr('style', '');
   			$('.pelotero-slideshow').cycle(0);  
 			} else {
-				console.log('scrolling up makuhari')
+				$('#logo-dark').fadeOut('fast');
 				$('#work').attr('style', '');
   			$('.makuhari-slideshow').cycle(0);  
 			}
